@@ -1,0 +1,85 @@
+.banner {
+    color: $banner-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    overflow: hidden;
+    &::before,
+    &::after {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        content: '';
+    }
+    &::before {
+        border-width: 187px 0 0 445px;
+        border-color: transparent transparent transparent #e5e5e5;
+        right: 60%;
+        @media (min-width: 992px) {
+            left: 0;
+            right: auto;
+        }
+    }
+    &::after {
+        content: '';
+        left: 50%;
+        border-width: 0 0 187px 740px;
+        border-color: transparent transparent #e42618;
+        @media (min-width: 1500px) {
+            left: auto;
+            right: 0;
+        }
+    }
+    &__logo {
+        margin: 56px auto 0;
+        display: block;
+        text-align: center;
+        @media (min-width: 768px) {
+            margin: 0;
+            text-align: left;
+        }
+    }
+    &__nav {
+        padding: 38px 56px;
+        ul {
+            text-align: center;
+            @media (min-width: 768px) {
+                text-align: left;
+                padding-top: 24px;
+                float: right;
+            }
+        }
+        li {
+            display: inline-block;
+            padding-left: 15px;
+            @media (min-width: 992px) {
+                padding-left: 30px;
+            }
+            &.account {
+                font-family: $headings-font-family;
+                font-weight: bold;
+                @media (min-width: 768px) {
+                    padding-right: 30px;
+                }
+                img {
+                    display: inline-block;
+                    vertical-align: bottom;
+                }
+            }
+        }
+        a {
+            color: $banner-color;
+            font-size: 18px;
+        }
+    }
+    &__title {
+        padding-bottom: 80px;
+        text-align: center;
+        font-weight: bold;
+        font-family: $headings-font-family;
+        font-size: 60px;
+    }
+}

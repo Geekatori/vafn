@@ -1,0 +1,2 @@
+!function(n){"use strict";function c(){return"ontouchstart"in window||navigator.maxTouchPoints}var t=n(".btn-question"),e=n(".question__faq");t.click(function(i){c()&&!n(this).hasClass("clicked-once")?(i.preventDefault(),e.fadeIn(),n(this).addClass("clicked-once")):c()&&n(this).hasClass("clicked-once")&&n("body, html").click(function(){t.removeClass("clicked-once"),e.fadeOut()})}),t.hover(function(){e.fadeIn()},function(){e.fadeOut()})}(jQuery);
+//# sourceMappingURL=main.build.js.map

@@ -1,0 +1,32 @@
+scss_files: "**/*.scss"
+plugin_directories: ['.scss-linters']
+
+
+linters:
+  DeclarationOrder:
+    enabled: false
+
+  EmptyLineBetweenBlocks:
+    enabled: false
+    ignore_single_line_blocks: true
+
+  Indentation:
+    enabled: true
+    allow_non_nested_indentation: false
+    character: space # or 'tab'
+    width: 4
+
+  NestingDepth:
+    enabled: true
+    max_depth: 4
+    ignore_parent_selectors: false
+
+  PropertySortOrder:
+    enabled: false
+    ignore_unspecified: false
+    min_properties: 2
+    separate_groups: false
+
+  SelectorDepth:
+    enabled: true
+    max_depth: 4
